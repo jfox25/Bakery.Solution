@@ -8,14 +8,15 @@ body {
 }
 ul {
   list-style: none;
-  padding: none;
+  padding: 0;
+  margin: 0;
 }
 .navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 50%;
+  max-width: 600px;
   margin: auto;
 }
 .navbar div {

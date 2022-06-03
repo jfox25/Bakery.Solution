@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Bakery.Models.Treat
+
+<h4>Add a new treat</h4>
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)
+  @if(ViewBag.Id == 0)
+  {
+    @Html.Label("Select flavor")
+    @Html.DropDownList("FlavorId")
+  }
+  else 
+  {
+    <label for="FlavorId">@ViewBag.Flavor.Name</label>
+    <select id="FlavorId" name="FlavorId">
+      <option value="@ViewBag.Flavor.FlavorId">@ViewBag.Flavor.Name</option>
+    </select>
+  }
+
+  <input type="submit" value="Add new treat" class="btn btn-default" />
+}
+<p class="button">@Html.ActionLink("Back to all Treats", "Index")</p>

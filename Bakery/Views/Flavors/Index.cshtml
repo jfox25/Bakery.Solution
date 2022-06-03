@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+@using Bakery.Models;
+@model IEnumerable<Bakery.Models.Flavor>
+<h1>All your Flavors @ViewBag.Name</h1>
+@if(Model.Any())
+{
+  <ul>
+    @foreach (Flavor flavor in Model)
+    {
+      <li>@Html.ActionLink($"{flavor.Name}", "Details" , new {id = flavor.FlavorId})</li>
+    }
+  </ul>
+}
+else
+{
+  <p>No flavors have been added yet.</p>
+}
+<p class="button">@Html.ActionLink("Add a Flavor", "Create")</p>
+<p class="button">@Html.ActionLink("Back", "Index", "Home")</p>
