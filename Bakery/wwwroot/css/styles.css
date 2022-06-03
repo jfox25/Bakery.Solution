@@ -1,0 +1,53 @@
+body {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  background-color: whitesmoke;
+  border: 3px solid rebeccapurple;
+  border-radius: 10px;
+}
+ul {
+  list-style: none;
+  padding: none;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+}
+.navbar div {
+  display: flex;
+  flex-direction: column;
+}
+.nav-button a {
+  text-decoration: none;
+  color: black;
+  background-color: rgb(171, 122, 221);
+  padding: 5px 8px;
+  border: 2px solid rebeccapurple;
+  font-size: 17px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.navbar-logoff {
+  background-color: rgb(201, 61, 61);
+  font-size: 15px;
+  border: 2px solid rgb(120, 12, 12);
+  padding: 3px 6px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.navbar-logoff:hover {
+  background-color: whitesmoke;
+  color: rgb(120, 12, 12);
+  cursor: pointer;
+}
+
+.nav-button a:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+  color: rebeccapurple;
+}
