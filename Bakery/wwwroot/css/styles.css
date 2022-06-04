@@ -52,3 +52,14 @@ ul {
   background-color: whitesmoke;
   color: rebeccapurple;
 }
+.button a {
+  background-color: #333;
+  color: white;
+  padding: 5px 7px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.button a:hover {
+  cursor: pointer;
+}

@@ -10,9 +10,18 @@
 {
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name)
-
-  @Html.Label("Select treat")
-  @Html.DropDownList("TreatId")
+  @if(ViewBag.Id == 0)
+  {
+    @Html.Label("Select treat")
+    @Html.DropDownList("TreatId")
+  }
+  else
+  {
+    <label for="TreatId">@ViewBag.Treat.Name</label>
+    <select id="TreatId" name="TreatId">
+      <option value="@ViewBag.Treat.TreatId">@ViewBag.Treat.Name</option>
+    </select>
+  }
 
   <input type="submit" value="Add new flavor" class="btn btn-default" />
 }
